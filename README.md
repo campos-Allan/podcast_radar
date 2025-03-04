@@ -1,25 +1,27 @@
-# RADAR DE PODCAST
+# PODCAST RADAR
 
-Fiz uma análise de dados comparando os 3 maiores podcasts do Brasil (Flow, Inteligência LTDA, Podpah), analisando views, likes, comentários e vídeos publicados ao decorrer do tempo. Mais explicações, argumentos e análises nesse vídeo: https://youtu.be/REJS0ysKVtg
+To answer the question 'Are podcasts in Brazil losing their hype?', I conducted a data analysis comparing the 3 biggest podcasts in Brazil (Flow, Inteligência LTDA, Podpah), analyzing views, likes, comments, and videos published over time. More explanations can be found in this video (PT-BR): https://youtu.be/REJS0ysKVtg
 
-Os arquivos .csv são os dados que eu busquei na API do Youtube dos canais analisados, disponibilizei aqui caso alguém queira mexer nos dados e fazer análises diferentes sem fazer uma nova busca pela API. Aqui só estão os gráficos com uma breve explicação, a análise foi feita no vídeo do youtube.
+The .csv files contain the data I fetched from the YouTube API for the analyzed channels. I’ve made them available here in case anyone wants to work with the data and perform different analyses without needing to fetch new data from the API. Here, you’ll only find the charts with a brief explanation; the analysis was done in the YouTube video.
 
-## Obtendo dados
+## Data Extraction
 
-Através da API do Youtube, obtive total de views, inscritos e vídeos feitos de cada canal e logo em seguida foi possível obter a ID de cada vídeo produzido pelo canais analisados, através dessa ID consegui consolidar dados de views, likes, comentários, duração, título e data de publicação de cada vídeo, resultando em um grande DataFrame com dados individuais de cada vídeo dos 3 canais analisados.
+Through the YouTube API, I obtained the total views, subscribers, and videos produced by each channel. Shortly after, I was able to retrieve the ID of each video produced by the analyzed channels. Using this ID, I consolidated data on views, likes, comments, duration, title, and publication date for each video, resulting in a large DataFrame with individual data for each video from the 3 analyzed channels.
 
-## Análise inicial
-Criei uma divisão baseada na duração da publicação, sendo 60s< = Short, caso contrário a publicação entra como Live, e pode-se ver o total de publicações de cada canal por essa divisão.
+## First look
+I created a division based on the publication duration: 60s<= is categorized as Short, otherwise, the publication is classified as Live, and you can see the total number of posts for each channel by this division. 
 ![1](https://i.imgur.com/eOpOfI4.png)
 
-Na próximo imagem aparece um consolidado total de views por tipo de publicação, demonstrando qual podcast hoje possui a maior quantidade de visualizações, e a comparação com seus concorrentes, dividido por tipo de publicação.
+In the next image, there is a total consolidated view count by publication type, showing which podcast currently has the highest number of views, and comparing it with its competitors, divided by publication type. 
 ![2](https://i.imgur.com/15bZeN0.png)
 
-Criei uma medida para ter uma proporação de views por segundo de publicação.
+I created a measure to calculate the proportion of views per second of publication. 
 ![3](https://i.imgur.com/mNHaxjz.png)
 
+Right now, it seems Podpah has the leverage over Flow Podcast and Inteligência LTDA
+
 ## Flow
-Gráficos de quantidade de publicações, views, likes e comentários do Flow no modo linha do tempo. Seguido do gráfico mostrando a tendência.
+Charts of the number of posts, views, likes, and comments of Flow in timeline mode, followed by the chart showing the trend.
 
 ![4](https://i.imgur.com/l3EteIQ.png)
 
@@ -37,7 +39,7 @@ Gráficos de quantidade de publicações, views, likes e comentários do Flow no
 
 ## Inteligência LTDA
 
-Gráficos de quantidade de publicações, views, likes e comentários do Inteligência LTDA no modo linha do tempo. Seguido do gráfico mostrando a tendência.
+Charts of the number of posts, views, likes, and comments of Inteligência LTDA in timeline mode, followed by the chart showing the trend.
 
 ![11](https://i.imgur.com/iyNFJxM.png)
 
@@ -57,7 +59,7 @@ Gráficos de quantidade de publicações, views, likes e comentários do Intelig
 
 ## Podpah
 
-Gráficos de quantidade de publicações, views, likes e comentários do Podpah no modo linha do tempo. Seguido do gráfico mostrando a tendência.
+Charts of the number of posts, views, likes, and comments of Podpah in timeline mode, followed by the chart showing the trend.
 
 ![19](https://i.imgur.com/4lOOM8x.png)
 
@@ -75,11 +77,11 @@ Gráficos de quantidade de publicações, views, likes e comentários do Podpah 
 
 ![26](https://i.imgur.com/KEv2GaU.png)
 
-## Comparação entre os três
+## Comparison between the three
 
-A primeira vista parece que com o decorrer do tempo o Flow foi perdendo relevância frente aos outros dois concorrentes.
+At first glance, it seems that over time, Flow has been losing relevance compared to the other two competitors.
 
-FLOW = Azul, PODPAH = Verde, INTELIGÊNCIA LTDA = Laranja
+FLOW = Blue, PODPAH = Green, INTELIGÊNCIA LTDA = Orange
 
 ![27](https://i.imgur.com/dntLt0q.png)
 
@@ -91,9 +93,9 @@ FLOW = Azul, PODPAH = Verde, INTELIGÊNCIA LTDA = Laranja
 
 ![31](https://i.imgur.com/FM3AIZP.png)
 
-## Estúdios Flow
+## Flow Studios
 
-Acontece que o Flow não pode ser analisado apenas pelo canal de podcast do Flow, visto que eles começaram a expandir e criar os estúdios Flow, a seguir encontram-se as mesmas análises anteriores, porém com os números referentes aos Estúdios Flow como um todo.
+It turns out that Flow cannot be analyzed solely by the Flow podcast channel, as they started expanding and creating the Flow studios. Below are the same previous analyses, but with the numbers referring to the Flow Studios as a whole.
 
 ![32](https://i.imgur.com/ROORZvv.png)
 
@@ -101,9 +103,9 @@ Acontece que o Flow não pode ser analisado apenas pelo canal de podcast do Flow
 
 ![34](https://i.imgur.com/fVyU8Wm.png)
 
-## Nova comparação entre Estúdios Flow e os outros dois
+## New comparison between Studios Flow and the other two
 
-Percebe-se nessa nova análise que os Estúdios Flow enquanto aglomerado continuam sendo o podcast/rede com maior engajamento no meio, porém gastando bem mais que seus concorrentos, visto que a quantidade da produção de conteúdo é muito maior. O gráfico a seguir mostra justamente esse consolidado de publicações entre o Estúdios Flow como um todo contra os outros dois concorrentes. No fim encontram-se as comparações no modo linha do tempo.
+It can be observed in this new analysis that Flow Studios, as a whole, remains the podcast/network with the highest engagement in the field, although spending much more than its competitors, as the amount of content production is significantly higher. The following chart shows the consolidated publications between Flow Studios as a whole versus the other two competitors. At the end, you will find the comparisons in timeline mode.
 
 ![35](https://i.imgur.com/vkHTzhp.png)
 
