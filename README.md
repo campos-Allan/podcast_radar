@@ -18,8 +18,6 @@ In the next image, there is a total consolidated view count by publication type,
 I created a measure to calculate the proportion of views per second of publication. 
 ![3](https://i.imgur.com/mNHaxjz.png)
 
-Right now, it seems Podpah has the leverage over Flow Podcast and Inteligência LTDA
-
 ## Flow
 Charts of the number of posts, views, likes, and comments of Flow in timeline mode, followed by the chart showing the trend.
 
